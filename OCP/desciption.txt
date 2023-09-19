@@ -1,0 +1,16 @@
+Pendekatan "Before" (Sebelumnya):
+1. Monolitik: Dalam pendekatan "before," semua logika aplikasi (penyimpanan, logika bisnis, pencatatan) sering kali ditempatkan dalam satu file atau satu paket, membuat aplikasi menjadi monolitik.
+2. Perubahan Bersifat Invasive: Ketika Anda perlu menambahkan atau mengubah fungsionalitas, seringkali Anda harus mengubah kode yang ada, yang berisiko menyebabkan masalah dan bug baru.
+3. Kurang Fleksibel: Sistem sulit untuk diperluas dan dipelihara karena semua komponen terkait erat satu sama lain.
+
+Contoh Pendekatan "Before" (Sebelumnya):
+Dalam contoh sebelumnya, kita memiliki satu file main.go yang mengurus semua operasi penyimpanan gudang, input barang, dan pencatatan. Semua logika ini tergabung dalam satu file, dan jika kita ingin menambahkan atau mengubah fungsionalitas, kita harus mengubah kode di dalam file ini.
+
+Pendekatan "After" (Setelahnya):
+
+1. Pemisahan Fungsionalitas: Dalam pendekatan "after," fungsionalitas sistem dipisahkan menjadi berbagai file terpisah sesuai dengan fungsinya, seperti penyimpanan gudang, pencatatan, dan logika aplikasi utama.
+2. Fleksibilitas Tinggi: Setiap komponen dapat diperluas atau diubah tanpa mengubah yang lain. Ini meningkatkan fleksibilitas dan kemudahan perluasan.
+3. Kepatuhan Prinsip Open/Closed: Prinsip Open/Closed diikuti dengan ketat. Kode yang ada tidak diubah saat menambahkan fungsionalitas baru.
+
+Contoh Pendekatan "After" (Setelahnya):
+Dalam contoh setelahnya, kita memisahkan logika penyimpanan gudang, logika pencatatan, dan logika aplikasi utama menjadi tiga file terpisah: penyimpanan.go, gudang.go, dan logger.go. Dengan cara ini, kita dapat mengubah atau menambahkan fungsionalitas ke setiap komponen tanpa mengganggu yang lain. Misalnya, jika kita ingin menambahkan jenis penyimpanan gudang baru, kita hanya perlu membuat file baru dan mengimplementasikan interface Inputable tanpa harus mengubah main.go. Ini mematuhi prinsip Open/Closed.

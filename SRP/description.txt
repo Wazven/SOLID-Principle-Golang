@@ -1,0 +1,17 @@
+Before (Sebelum menerapkan SRP):
+Sebelum menerapkan SRP, kode cenderung memiliki struktur monolitik di mana semua fungsionalitas terkait dengan sebuah fitur tertentu dapat ditemukan dalam satu tempat. Dalam hal ini, ada kecenderungan untuk menjalankan banyak tanggung jawab atau pekerjaan yang berbeda dalam satu komponen atau kelas. Ini dapat menyebabkan masalah seperti:
+
+1. Kode yang rumit dan sulit untuk dipahami.
+2. Kesulitan dalam pemeliharaan dan pengujian kode.
+3. Sulit untuk memisahkan dan menguji unit-unit kecil dari kode (unit testing).
+4. Perubahan pada satu bagian kode dapat memengaruhi bagian lain yang tidak terkait.
+
+After (Setelah menerapkan SRP):
+Setelah menerapkan SRP, kode dibagi menjadi komponen yang lebih kecil dan lebih terfokus dengan setiap komponen atau kelas yang memiliki satu tanggung jawab utama. Perbedaannya adalah:
+
+1. Kode lebih terorganisir: Setiap komponen atau kelas hanya memiliki satu tanggung jawab utama, sehingga kode menjadi lebih terstruktur dan mudah dimengerti.
+2. Pemeliharaan lebih mudah: Kode yang dibagi menjadi unit-unit kecil lebih mudah untuk dikelola dan diperbaiki jika terjadi masalah.
+3. Pengujian lebih efisien: Dengan memiliki unit-unit kecil yang independen, pengujian (unit testing) menjadi lebih mudah dan efisien karena Anda dapat menguji masing-masing unit tanpa harus mempertimbangkan banyak tanggung jawab sekaligus.
+4. Perubahan yang lebih aman: Perubahan pada satu unit tidak akan berdampak besar pada unit lain, sehingga risiko "efek samping" berkurang.
+
+Dalam contoh kode yang telah kita diskusikan sebelumnya, pendekatan "before" adalah ketika semua kode (buku, pelanggan, logika peminjaman, dan pengembalian) ditempatkan dalam satu file atau kelas tunggal. Pendekatan "after" adalah ketika kode dibagi menjadi beberapa file atau kelas yang memiliki tanggung jawab yang lebih terfokus, misalnya, satu file untuk buku, satu file untuk pelanggan, dan satu file untuk fungsi log. Ini mempermudah pemeliharaan, pengujian, dan perubahan pada kode.
